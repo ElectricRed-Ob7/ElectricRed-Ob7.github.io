@@ -709,9 +709,12 @@
               // Create condition when two variables are true
               // Update the value of the html element or the "hp" of the skeletons
               if (dice>=5) {
-                alert("Your attack does 5 damage!");
-                skeletonHP1=skeletonHP1-=5;
-                document.getElementById("skeleton1").innerHTML=skeletonHP1 + " HP";
+                while (skeletonHP1>0) {
+                  alert("Your attack does 5 damage!");
+                  skeletonHP1=skeletonHP1-=5;
+                  document.getElementById("skeleton1").innerHTML=skeletonHP1 + " HP";
+                  break;
+                }
               }
               // If user roll <5, the value doesnt update 
               // And the user "miss" their attack
