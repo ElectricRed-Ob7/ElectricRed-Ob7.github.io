@@ -333,11 +333,6 @@
         text-decoration: none;
         border-radius: 10px;
       }
-      .statDisplay {
-      border-style:solid;
-      border-color:rgb(80, 80, 80);
-      padding:10px;
-      }
     </style>
   </head>
   <body>
@@ -375,14 +370,12 @@
           <button id="skeleton2" class="skeletonStyle" onclick="skeletonButton2()">20 HP</button>
           <button id="afterFightButton1" class="healButtonStyle" onclick="mendingSelf()">Try to mend your wounds yourself.</button>
           <button id="afterFightButton2" class="healButtonStyle" onclick="lookForMedical()">Look for medical supplies.</button>
-          <div id="statDisplayId" class="statDisplay">
             <h1 id ="healthPoints" class="healthDisplay">100 HP</h1>
             <h1 id ="damageMeter" class="damageDisplay">5 Damage</h1>
             <h1 id="amountOfGold" class="goldDisplay">0 Gold</h1>
             <h1 id="weapon" class="weaponDisplay">Weapon: Melee</h1>
             <h1 id="equipment" class="equipmentDisplay">Equipment: Nothing</h1>
             <h1 id="tbc" class="tbcStyle">To be continued...</h1>
-          </div>
           <script> 
             // Create a variable and save the state of it. 
               var goThroughLeftDoor= false;
@@ -414,7 +407,6 @@
               var outputAfterFight2=document.getElementById("afterFightButton2");
               var outputAfterFightText=document.getElementById("afterFightText");
               var outputTBC=document.getElementById("tbc");
-              var outputStatDisplay=document.getElementById("statDisplayId");
             // create variable with a specific text to be use as an output. 
               var leftDoorText = "You decide to go through the left door.";
               var rightDoorText = "You decide to go through the right door.";
@@ -462,7 +454,6 @@
               outputAfterFight2.style.display="none";
               outputAfterFightText.style.display="none";
               outputTBC.style.display="none";
-              outputStatDisplay.style.display="none";
               // check state of variable in console
               console.log(goThroughLeftDoor);
               console.log(goThroughRightDoor);
@@ -486,7 +477,6 @@
                 outputWeapon.style.display="block";
                 outputEquipment.style.display="block";
                 outputDoor.style.display="inline-block";
-                outputStatDisplay.style.display="block";
               }
               //function for the leftdoor button 
               function leftDoor() {
